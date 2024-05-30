@@ -1,5 +1,5 @@
 body {
-    background-image: url('images\배경 이미지.png'); /* 배경 이미지 URL 설정 */
+    background-image: url('images/배경 이미지.png'); /* 배경 이미지 URL 설정 */
     background-size: cover; /* 배경 이미지를 커버하도록 설정 */
     background-position: center; /* 배경 이미지의 위치 설정 */
     display: flex; /* Flexbox 사용 */
@@ -11,19 +11,12 @@ body {
 }
 
 .container {
-    text-align: center; /* 텍스트 가운데 정렬 */
-    width: 100%; /* 컨테이너의 너비를 페이지 전체로 설정 */
-    background: rgba(255, 255, 255, 0.8); /* 흰 배경색 및 투명도 설정 */
-    padding: 20px; /* 내부 여백 설정 */
+    width: 80%; /* 컨테이너의 너비를 페이지 너비의 80%로 설정 */
     display: flex; /* Flexbox 사용 */
-    flex-direction: column; /* 세로 방향으로 아이템을 쌓도록 설정 */
+    flex-direction: column; /* 세로 방향으로 아이템을 배치 */
     align-items: center; /* 수직 가운데 정렬 */
-    position: relative; /* 부모로부터 상대적인 위치 설정 */
-
-   
 }
 
-/* 검색 기능 컨테이너 스타일 설정 */
 .search-container {
     position: relative; /* 상대적인 위치 설정 */
     width: 100%; /* 너비를 100%로 설정 */
@@ -31,9 +24,8 @@ body {
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center; /* 수직 가운데 정렬 */
     margin-bottom: 20px; /* 하단 여백 설정 */
-}
+} 
 
-/* 검색 입력 상자 스타일 설정 */
 .search-box {
     width: 100%; /* 너비를 100%로 설정 */
     padding: 10px 40px 10px 10px; /* 내부 여백 설정 */
@@ -43,7 +35,6 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
 }
 
-/* 검색 아이콘 스타일 설정 */
 .search-icon {
     cursor: pointer; /* 마우스 커서를 포인터로 변경 */
     font-size: 18px; /* 아이콘 크기 설정 */
@@ -53,16 +44,15 @@ body {
     transform: translateY(-50%); /* 수직 가운데 정렬 */
 }
 
-/* 실시간 선택 기능 컨테이너 스타일 설정 */
 .realtime-container {
-    width: 100%; /* 너비를 100%로 설정 */
+    width: auto; /* 너비를 자동으로 설정 */
     display: flex; /* Flexbox 사용 */
     justify-content: flex-end; /* 우측 정렬 */
     align-items: center; /* 수직 가운데 정렬 */
+    margin-left: auto; /* 왼쪽 마진 자동 설정으로 오른쪽 정렬 */
     margin-bottom: 20px; /* 하단 여백 설정 */
 }
 
-/* 실시간 선택 기능 선택 상자 스타일 설정 */
 .realtime-container select {
     padding: 10px; /* 내부 여백 설정 */
     font-size: 14px; /* 글꼴 크기 설정 */
@@ -70,29 +60,26 @@ body {
     border-radius: 4px; /* 모서리를 둥글게 만들기 */
 }
 
-/* 선택 상자 컨테이너 스타일 설정 */
 .select-container {
     display: flex; /* Flexbox 사용 */
     justify-content: space-between; /* 아이템들 사이의 간격을 균등하게 배치 */
     align-items: center; /* 수직 가운데 정렬 */
     width: 100%; /* 너비를 100%로 설정 */
+    margin-bottom: 20px; /* 하단 여백 설정 */
 }
 
-/* 새로고침 컨테이너 스타일 설정 */
 .refresh-container {
     display: flex; /* Flexbox 사용 */
     align-items: center; /* 수직 가운데 정렬 */
     margin-right: 10px; /* 오른쪽 여백 설정 */
 }
 
-/* 새로고침 아이콘 스타일 설정 */
 .refresh-icon {
     cursor: pointer; /* 마우스 커서를 포인터로 변경 */
     font-size: 18px; /* 아이콘 크기 설정 */
     margin-right: 5px; /* 오른쪽 여백 설정 */
 }
 
-/* 새로고침 텍스트 스타일 설정 */
 .refresh-text {
     font-size: 12px; /* 글꼴 크기를 줄임 */
     white-space: nowrap; /* 줄 바꿈 방지 */
@@ -107,7 +94,6 @@ body {
     border-radius: 4px; /* 모서리를 둥글게 만들기 */
 }
 
-/* '~' 기호 스타일 설정 */
 .select-container .tilde {
     font-size: 18px; /* 글꼴 크기 설정 */
     margin: 0 5px; /* 좌우 여백 설정 */
