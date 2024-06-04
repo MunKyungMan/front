@@ -57,7 +57,7 @@ html, body {
 .realtime-container {
     width: 700px; /* 전체 너비 조정 */
     text-align: right; /* 텍스트 오른쪽 정렬 */
-    margin-bottom: 20px; /* 아래 여백 추가 */
+    margin-bottom: 0px; /* 아래 여백 추가 */
 }
 
 /* 실시간 순위 셀렉트 박스 스타일 */
@@ -141,7 +141,7 @@ html, body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%); /* 페이지 가운데 정렬 */
-    top: calc(28% - 1.5px); /* 페이지 세로 중앙에서 위로 1/4 위치로 이동 */
+    top: calc(25% - 1.5px); /* 페이지 세로 중앙에서 위로 1/4 위치로 이동 */
     width: 100%; /* 페이지 전체 너비 */
     height: 3px; /* 선의 두께 */
     background-color: black;
@@ -151,7 +151,7 @@ html, body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: calc(31.5% - 1.5em); /* 페이지 세로 중앙에서 위로 1/6 위치로 이동 */
+    top: calc(29.5% - 1.5em); /* 페이지 세로 중앙에서 위로 1/6 위치로 이동 */
     text-align: center;
     width: 700px; /* 추가 */
     margin-bottom: 20px; /* 아래 여백 추가 */
@@ -170,6 +170,7 @@ html, body {
     padding: 10px;
     margin-bottom: 20px; /* 아래 여백 추가 */
     background-color: #f9f9f9;
+    
 }
 
 .post-title {
