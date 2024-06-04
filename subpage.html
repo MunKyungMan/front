@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 페이지</title>
+    <link rel="stylesheet" href="subpage.css">
+</head>
+<body>
+    <div class="upper-box"></div>
+
+    <div class="main-wrapper">
+        <!-- 검색 상자 -->
+        <div class="search-container">
+            <input type="text" id="search-box" value="중소기업지원사업을 입력하세요." onfocus="clearPlaceholder()" onblur="setPlaceholder()" onkeydown="handleKeyPress(event)">
+            <button id="search-button" onclick="search()">🔍</button>
+        </div>
+
+        <!-- 실시간 순위 -->
+        <div class="realtime-container">
+            <label for="realtime-rank">실시간 순위:</label>
+            <select id="realtime-rank" onchange="updateRanking()">
+                <option value="1">1위</option>
+                <option value="2">2위</option>
+                <option value="3">3위</option>
+                <option value="4">4위</option>
+                <option value="5">5위</option>
+            </select>
+            <ul id="ranking-list">
+                <!-- 실시간 순위 항목들이 여기에 추가됩니다 -->
+            </ul>
+        </div>
+
+        <!-- 입력 상자와 관련된 요소들 -->
+        <div class="container">
+            <div id="refresh-container"><span class="no-click">새로고침</span> <span id="refresh-icon" onclick="refresh()">🔄</span></div>
+            <div class="location-container">
+                <label for="location">위치:</label>
+                <select id="location">
+                    <!-- 추후 데이터베이스에서 가져온 선택 값들이 여기에 추가됩니다 -->
+                </select>
+            </div>
+            <div class="amount-container">
+                <label for="amount1">금액:</label>
+                <input type="text" id="amount1">
+            </div>
+            <div class="tilde">~</div>
+            <div class="amount-container">
+                <label for="amount2">금액:</label>
+                <input type="text" id="amount2">
+            </div>
+        </div>
+    </div>
+
+    <div class="page-divider"></div>
+    <div id="search-text"></div>
+    
+    <!-- 게시판 -->
+    <div class="board-container" id="board-container">
+        <!-- 게시물이 여기에 추가될 것입니다 -->
+    </div>
+
+    <div class="lower-box"></div>
+
+    <!-- 페이지네이션을 포함하는 새로운 컨테이너 -->
+    <div class="pagination-container">
+        <span id="prev-page" onclick="prevPage()">&laquo;</span>
+        <div id="pagination-numbers"></div>
+        <span id="next-page" onclick="nextPage()">&raquo;</span>
+    </div>
+
+    <script src="subpage.js"></script>
+</body>
+</html>
