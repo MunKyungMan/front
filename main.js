@@ -2,16 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchBox = document.getElementById('searchBox');
     const searchIcon = document.querySelector('.search-icon');
     const locationSelect = document.getElementById('locationSelect');
-    const amountSelect1 = document.getElementById('amountSelect1');
-    const amountSelect2 = document.getElementById('amountSelect2');
+    const amountInput1 = document.getElementById('amountInput1');
+    const amountInput2 = document.getElementById('amountInput2');
 
     // 검색 함수
     function search() {
         const query = searchBox.value.trim();
+        // 검색어가 있는 경우에만 이동하도록 조건을 설정
         if (query) {
-            // 실제 검색 기능을 여기에 구현
             console.log(`Searching for: ${query}`);
-            // 예: window.location.href = `/search?query=${encodeURIComponent(query)}`;
+            window.location.href = 'subpage.html';
         }
     }
 
@@ -25,9 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // 필터 초기화 함수
     function resetFilters() {
         locationSelect.selectedIndex = 0;
-        amountSelect1.selectedIndex = 0;
-        amountSelect2.selectedIndex = 0;
+        amountInput1.value = '';
+        amountInput2.value = '';
         console.log('Filters reset');
+    }
+
+    // 로그인 페이지로 이동하는 함수
+    function goToLogin() {
+        window.location.href = 'login.html';
+    }
+
+    // 회원가입 페이지로 이동하는 함수
+    function goToSignup() {
+        window.location.href = 'signup.html';
     }
 
     // 검색 아이콘 클릭 이벤트 리스너 추가
@@ -36,5 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // 새로고침 아이콘 클릭 이벤트 리스너 추가
     const refreshIcon = document.querySelector('.refresh-icon');
     refreshIcon.addEventListener('click', resetFilters);
+
+    // Enter 키 이벤트 리스너 추가
+    searchBox.addEventListener('keydown', handleKeyDown);
+
+    // 로그인 버튼 클릭 이벤트 리스너 추가
+    const loginButton = document.querySelector('.login-button');
+    loginButton.addEventListener('click', goToLogin);
+
+    // 회원가입 버튼 클릭 이벤트 리스너 추가
+    const registerButton = document.querySelector('.register-button');
+    registerButton.addEventListener('click', goToSignup);
 });
-//git upload asd
