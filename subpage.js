@@ -19,7 +19,7 @@ function search() {
     var searchText = document.getElementById('search-box').value.trim();
     var searchResult = document.getElementById('search-text');
     if (searchText === "") {
-        searchResult.textContent = "아무것도 입력되지 않았습니다.";
+        searchResult.textContent = '"아무것도 입력되지 않았습니다."';
     } else {
         searchResult.textContent = '"' + searchText + '"가 입력되었습니다.';
     }
