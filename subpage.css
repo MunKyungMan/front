@@ -1,13 +1,40 @@
-/* 전체 페이지 스타일 */
+/* 로그인, 회원가입 버튼 스타일 */
+.header-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.login-button, .register-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-button {
+    background-color: #466ADB;
+    color: white;
+}
+
+.register-button {
+    background-color: #466ADB;
+    color: white;
+}
+
+/* 기존 스타일 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* 최소 높이 설정 */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 위아래 여백 동일하게 설정 */
-    background-color: rgba(255, 255, 255, 1); /* 흰색 배경색 설정 */
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 html, body {
@@ -17,31 +44,27 @@ html, body {
     padding: 0;
 }
 
-/* main-wrapper를 추가하여 중앙 정렬 및 여백 조정 */
 .main-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
-    margin-top: 60px; /* upper-box 아래의 여백 */
+    margin-top: 60px;
 }
 
-/* 검색 상자 스타일 */
 .search-container {
     position: relative;
-    width: 700px; /* 전체 너비 조정 */
-    margin-bottom: 20px; /* 아래 여백 추가 */
+    width: 700px;
+    margin-bottom: 20px;
 }
 
-/* 검색 입력 상자 스타일 */
 #search-box {
     width: 100%;
-    padding: 10px 50px 10px 10px; /* 오른쪽 패딩 추가 */
+    padding: 10px 50px 10px 10px;
     font-size: 16px;
     box-sizing: border-box;
 }
 
-/* 검색 버튼 스타일 */
 #search-button {
     position: absolute;
     right: 10px;
@@ -50,73 +73,62 @@ html, body {
     border: none;
     background: none;
     cursor: pointer;
-    font-size: 18px; /* 돋보기 이모티콘 크기 */
+    font-size: 18px;
 }
 
-/* 실시간 순위 컨테이너 스타일 */
 .realtime-container {
-    width: 700px; /* 전체 너비 조정 */
-    text-align: right; /* 텍스트 오른쪽 정렬 */
-    margin-bottom: 0px; /* 아래 여백 추가 */
+    width: 700px;
+    text-align: right;
+    margin-bottom: 0px;
 }
 
-/* 실시간 순위 셀렉트 박스 스타일 */
 #realtime-rank {
     margin-left: 10px;
     padding: 5px;
 }
 
-/* 실시간 순위 목록 스타일 */
 #ranking-list {
     margin-top: 10px;
     padding-left: 20px;
 }
 
-/* 입력 상자 컨테이너 스타일 */
 .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 700px; /* 전체 너비 조정 */
-    margin-bottom: 20px; /* 아래 여백 추가 */
+    width: 700px;
+    margin-bottom: 20px;
 }
 
-/* 입력 상자 스타일 */
 .container > div {
     margin-right: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
-/* 입력 상자 스타일 - 마지막 요소 */
 .container > div:last-child {
     margin-right: 0;
 }
 
-/* "~" 텍스트 스타일 */
 .tilde {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-/* 새로고침 컨테이너 스타일 */
 #refresh-container {
     cursor: pointer;
-    margin-bottom: 20px; /* 아래 여백 추가 */
+    margin-bottom: 20px;
 }
 
-/* 클릭할 수 없는 텍스트 스타일 */
 .no-click {
     pointer-events: none;
 }
 
-/* 결과 컨테이너 스타일 */
 #results {
     margin-top: 20px;
     text-align: center;
 }
 
-/* 상단과 하단의 박스 스타일 */
 .upper-box, .lower-box {
     width: 100%;
     height: 50px;
@@ -125,7 +137,7 @@ html, body {
 }
 
 .upper-box {
-    top: 0; /* 페이지 맨 위에 배치 */
+    top: 0;
 }
 
 .lower-box {
@@ -133,17 +145,16 @@ html, body {
     width: 100%;
     height: 50px;
     background-color: #466ADB;
-    bottom: 0; /* 페이지 내용이 스크롤되더라도 항상 화면 아래에 배치됩니다. */
+    bottom: 0;
 }
 
-/* 페이지의 전체 너비에 걸쳐 검은 선을 그리는 스타일 */
 .page-divider {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* 페이지 가운데 정렬 */
-    top: calc(25% - 1.5px); /* 페이지 세로 중앙에서 위로 1/4 위치로 이동 */
-    width: 100%; /* 페이지 전체 너비 */
-    height: 3px; /* 선의 두께 */
+    transform: translateX(-50%);
+    top: calc(25% - 1.5px);
+    width: 100%;
+    height: 3px;
     background-color: black;
 }
 
@@ -151,26 +162,24 @@ html, body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: calc(29.5% - 1.5em); /* 페이지 세로 중앙에서 위로 1/6 위치로 이동 */
+    top: calc(29.5% - 1.5em);
     text-align: center;
-    width: 700px; /* 추가 */
-    margin-bottom: 20px; /* 아래 여백 추가 */
+    width: 700px;
+    margin-bottom: 20px;
 }
 
 .board-container {
-    width: 700px; /* 수정 */
+    width: 700px;
     margin-top: 20px;
-    margin-left: auto; /* 추가 */
-    margin-right: auto; /* 추가 */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* 게시물 스타일 */
 .post {
     border: 2px solid black;
     padding: 10px;
-    margin-bottom: 20px; /* 아래 여백 추가 */
+    margin-bottom: 20px;
     background-color: #f9f9f9;
-    
 }
 
 .post-title {
@@ -182,14 +191,12 @@ html, body {
     font-style: italic;
 }
 
-/* 금액 입력 상자 스타일 */
 .amount-container input {
     width: 100px;
     padding: 5px;
     font-size: 14px;
 }
 
-/* 페이지네이션 컨테이너 스타일 */
 .pagination-container {
     position: relative;
     bottom: 1%;

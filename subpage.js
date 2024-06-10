@@ -200,3 +200,13 @@ window.onload = function () {
 
     paginatePosts(); // 초기 게시물 표시
 };
+
+function goToLogin() {
+    // 로그인 페이지로 이동하는 함수
+    window.location.href = 'login.html'; // 로그인 페이지 URL로 변경
+}
+
+function goToSignUp() {
+    // 회원가입 페이지로 이동하는 함수
+    window.location.href = 'signUp.html'; // 회원가입 페이지 URL로 변경
+}
